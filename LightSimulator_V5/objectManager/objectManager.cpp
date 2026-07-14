@@ -15,6 +15,7 @@ objectManager::objectManager(Shader quadShader, Shader rayShader) {
 	rRenderer = new RayRenderer(rayShader);
 	gui = new guiManager();
 	selState = choose;
+	selectedObject = nullptr;
 	//dbMan = *new DatabaseManager();
 }
 
@@ -463,7 +464,8 @@ void objectManager::drawAll() {
 	bool clearSc = false;
 	//Render GUI.
 	gui->prepareNewFrame();
-	gui->createSceneManagerWindow(clearSc, addObject, addLight, *selectedObject, angList);
+	static ObjectTemplate dummyObject;
+	gui->createSceneManagerWindow(clearSc, addObject, addLight, selectedObject ? *selectedObject : dummyObject, angList);
 	gui->displayNumbers(angList);
 	gui->renderNewFrame();
 	//If the user clicks to add an object, then the object will be added and rendered to the scene on the next frame.
