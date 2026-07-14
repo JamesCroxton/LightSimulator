@@ -262,3 +262,6 @@ __pycache__/
 # Temporary project fix scripts
 fix_*.ps1
 build_log.txt
+/LightSimulator_V5/build
+/LightSimulator_V5/LightSimulator.exe
+/LightSimulator_V5/crash_output.txt
