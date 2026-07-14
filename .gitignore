@@ -266,3 +266,5 @@ build_log.txt
 /LightSimulator_V5/LightSimulator.exe
 /LightSimulator_V5/crash_output.txt
 /LightSimulator_V5/out/build/x64-Debug
+/LightSimulator/build
+/LightSimulator/LightSimulator.exe
