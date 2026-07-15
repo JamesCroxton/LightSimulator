@@ -8,8 +8,6 @@
 #include "program/program.h"
 #include "resourceManager/resourceManager.h"
 
-//TODO: MAKE A "POINT TOWARDS" OBJECT FOR LIGHT RAYS SO ROTATES TO THAT OBJECT INSTEAD OF MOUSE.
-
 // GLFW function declerations
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mode);
