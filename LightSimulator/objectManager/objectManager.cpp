@@ -349,12 +349,12 @@ bool objectManager::doExperiment() {
 	//This function will return a boolean which will tell whether an experiment was carried out.
 	//Use of a switch statement to check which experiment to do.
 	switch (gui->activeExperiment) {//the gui object contains an int to represent which experiment to do.
-	case 1:	
+	case 1: {
 		clearAllObjects();
 		//Set the starting position for automatically added objects.
 		glm::vec2 positions = glm::vec2(700, 500);
 		//Loop through the user entered data from the GUI and add objects accordingly.
-		for (unsigned int i = 0; i < sizeof(gui->refractiveIndexes)/sizeof(gui->refractiveIndexes[i]); i++) {
+		for (unsigned int i = 0; i < sizeof(gui->refractiveIndexes) / sizeof(gui->refractiveIndexes[i]); i++) {
 			if (gui->refractiveIndexes[i] != 0.000) {
 				//Increment x coordinate so objects are added next to eachother.
 				positions.x += 100 + gui->objectGap;
@@ -367,13 +367,13 @@ bool objectManager::doExperiment() {
 		//add a new light object with angle according to the users input. Set the fixed value to true to prevent accidental movement.
 		addLight(glm::vec2(500, 300), glm::vec2(60, 60), "torch", true);
 		lightList[0]->rotateByAngle(gui->incidenceAngle);
-		
+
 		//Now that experiment has been carried out, set the active experiment to 0 (no experiment) to prevent 
 		//the next render loop repeating the experiment.
 		gui->activeExperiment = 0;
 		return true;
 		break;
-
+	}
 
 	default:
 		return false;
