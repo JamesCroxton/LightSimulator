@@ -9,3 +9,11 @@ cmake --build build
 
 Run:
 .\LightSimulator.exe  
+
+
+without Ninja:
+cmake -S . -B build
+cmake --build build
+
+On Mac:
+.\LightSimulator	(without .exe)
